@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+	<span class="material-icons md-36" style="margin-right:0.15em">router</span>
+	<span style="margin-bottom:-12px">Wifi Client Watch</span>
+	<!-- This fills the remaining space of the current row -->
+	<span class="example-fill-remaining-space"></span>
+	<mat-icon-button [matMenuTriggerFor]="menu" style="cursor:pointer">
+		<mat-icon class="">more_vert</mat-icon>
+	</mat-icon-button>
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item>Settings</button>
+		<button mat-menu-item>Logout</button>
+	</mat-menu>
+</mat-toolbar>
+
+<div class="content" role="main">
+	<app-clients></app-clients>
+</div>
+
+<router-outlet></router-outlet>
